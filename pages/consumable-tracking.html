@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternBot - Consumables</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+
+  <div class="max-w-3xl mx-auto">
+
+    <h1 class="text-3xl font-bold mb-4 text-center">📦 Consumable Stock</h1>
+
+    <!-- Return Button -->
+    <div class="mb-4 text-center">
+      <a href="../index.html" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+        ← Return to Main Page
+      </a>
+    </div>
+
+    <!-- Add Consumable Form -->
+    <form id="consumableForm" class="bg-white p-4 rounded-lg shadow-md mb-6 flex flex-col gap-3">
+      <input type="text" id="consumableName" placeholder="Consumable Name" class="p-2 border rounded" required>
+      <select id="consumableCategory" class="p-2 border rounded">
+        <option value="Stationery">Stationery</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="number" id="consumableQuantity" placeholder="Quantity" class="p-2 border rounded" required min="0">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Item</button>
+    </form>
+
+    <!-- Filters & Sorting -->
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <select id="filterCategory" class="p-2 border rounded">
+        <option value="all">All Categories</option>
+        <option value="Stationery">Stationery</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Other">Other</option>
+      </select>
+      <select id="sortOption" class="p-2 border rounded">
+        <option value="quantity">Sort by Quantity</option>
+        <option value="name">Sort by Name</option>
+      </select>
+    </div>
+
+    <!-- Consumable List -->
+    <ul id="consumableList" class="flex flex-col gap-3"></ul>
+
+    <!-- Stats -->
+    <p id="consumableCount" class="mt-4 text-center font-semibold"></p>
+
+  </div>
+
+  <script src="../consumable-tracking.js" defer></script>
+</body>
+</html>

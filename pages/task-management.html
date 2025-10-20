@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternBot - Task Manager</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+
+  <div class="max-w-3xl mx-auto">
+
+    <h1 class="text-3xl font-bold mb-4 text-center">📝 Task Manager</h1>
+
+    <!-- Return Button -->
+    <div class="mb-4 text-center">
+      <a href="../index.html" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+        ← Return to Main Page
+      </a>
+    </div>
+
+    <!-- Task Form -->
+    <form id="taskForm" class="bg-white p-4 rounded-lg shadow-md mb-6 flex flex-col gap-3">
+      <input type="text" id="taskName" placeholder="Task Name" class="p-2 border rounded" required>
+      <select id="taskCategory" class="p-2 border rounded">
+        <option value="Work">Work</option>
+        <option value="Admin">Admin</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Other">Other</option>
+      </select>
+      <select id="taskPriority" class="p-2 border rounded">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="date" id="taskDeadline" class="p-2 border rounded" required>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Task</button>
+    </form>
+
+    <!-- Filters & Sorting -->
+    <div class="flex gap-2 mb-4 flex-wrap">
+      <select id="filterStatus" class="p-2 border rounded">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="done">Done</option>
+      </select>
+      <select id="filterCategory" class="p-2 border rounded">
+        <option value="all">All Categories</option>
+        <option value="Work">Work</option>
+        <option value="Admin">Admin</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Other">Other</option>
+      </select>
+      <select id="sortOption" class="p-2 border rounded">
+        <option value="priority">Sort by Priority</option>
+        <option value="deadline">Sort by Deadline</option>
+      </select>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="flex flex-col gap-3"></ul>
+
+    <!-- Stats -->
+    <p id="taskCount" class="mt-4 text-center font-semibold"></p>
+
+  </div>
+
+  <!-- Script with defer ensures it runs after DOM -->
+  <script src="../task-management.js" defer></script>
+</body>
+</html>

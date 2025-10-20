@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intern Bot Hub</title>
+
+  <!-- ✅ Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- ✅ Your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Intern Bot Hub</h1>
+    <button id="dropdownBtn">Premium Physical Robot Features ⬇</button>
+  </header>
+
+  <!-- Digital Intern Bot Features -->
+  <section>
+    <h2>Digital Intern Bot</h2>
+    <div class="grid-container" id="digitalGrid">
+      <a href="pages/task-management.html" class="tile">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <span>Personalized Task Management</span>
+      </a>
+      <a href="pages/priority-scheduling.html" class="tile">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>Priority-Based Scheduling</span>
+      </a>
+      <a href="pages/consumable-tracking.html" class="tile">
+        <i class="fa-solid fa-box-open"></i>
+        <span>Consumable Tracking</span>
+      </a>
+      <a href="pages/auto-reordering.html" class="tile">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+        <span>Automatic Reordering</span>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Physical Robot Features -->
+  <section>
+    <h2>Social Intern Bot (S-IB) — Premium Full Version</h2>
+    <div class="grid-container" id="physicalGrid">
+      <div class="tile">
+        <i class="fa-solid fa-robot"></i>
+        <span>Robot Task Queue</span>
+        <div class="pro-badge">PREMIUM</div>
+      </div>
+      <div class="tile">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>Real-Time Item Location</span>
+        <div class="pro-badge">PREMIUM</div>
+      </div>
+      <!-- More S-IB features -->
+    </div>
+  </section>
+  
+  <footer>
+    &copy; 2025 Intern Bot — Intelligent Office Assistant
+  </footer>
+  <!-- Modal (hidden by default) -->
+<div id="featureModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h3 id="modalTitle">Feature Title</h3>
+    <p id="modalDescription">Feature description goes here...</p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
