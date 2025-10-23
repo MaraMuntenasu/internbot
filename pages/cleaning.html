@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleaning Assistant | Social InternBot</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="premium-page">
+  <header>
+    <h1>🧹 Cleaning Assistant</h1>
+    <p>Simulated robotic cleaning control panel.</p>
+    <a href="../index.html" class="back-btn">⬅ Back</a>
+  </header>
+
+  <main id="cleaning-area">
+    <div id="robot" class="robot"></div>
+    <button id="startCleaning">Start Cleaning</button>
+  </main>
+
+  <script>
+    const robot = document.getElementById('robot');
+    const button = document.getElementById('startCleaning');
+
+    button.addEventListener('click', () => {
+      button.disabled = true;
+      button.textContent = "Cleaning in progress...";
+      robot.classList.add('move');
+      setTimeout(() => {
+        robot.classList.remove('move');
+        button.textContent = "✅ Cleaning Complete!";
+      }, 6000);
+    });
+  </script>
+</body>
+</html>

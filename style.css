@@ -278,3 +278,61 @@ body {
 .category-Admin { color: #e9c46a; }
 .category-Maintenance { color: #e76f51; }
 .category-Other { color: #264653; }
+/* Base tile style */
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: #a11212; /* burgundy */
+  color: #ffd7c4; /* light salmon text */
+  text-decoration: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  background: #e57a69;
+  color: white;
+}
+
+/* Premium Section Styling */
+.premium-section {
+  background: #fff8f7;
+  border-top: 3px solid #e57a69;
+  border-radius: 1rem;
+  padding: 1rem 1rem 2rem;
+}
+
+.premium-btn {
+  background: linear-gradient(90deg, #a11212, #e57a69);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.premium-btn:hover {
+  background: linear-gradient(90deg, #e57a69, #a11212);
+  transform: scale(1.05);
+}
+
+.premium-tile {
+  background: #e57a69;
+  color: white;
+}
+
+.premium-tile:hover {
+  background: #a11212;
+}
+
+.hidden {
+  display: none;
+}

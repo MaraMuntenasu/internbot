@@ -43,24 +43,35 @@
     </div>
   </section>
 
-  <!-- Physical Robot Features -->
-  <section>
-    <h2>Social Intern Bot (S-IB) — Premium Full Version</h2>
-    <div class="grid-container" id="physicalGrid">
-      <div class="tile">
-        <i class="fa-solid fa-robot"></i>
-        <span>Robot Task Queue</span>
-        <div class="pro-badge">PREMIUM</div>
-      </div>
-      <div class="tile">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <span>Real-Time Item Location</span>
-        <div class="pro-badge">PREMIUM</div>
-      </div>
-      <!-- More S-IB features -->
+
+  <section class="hub-section premium-section">
+    <div class="premium-header">
+      <h2 class="section-title">Social Intern Bot (S-IB) — Premium Full Version</h2>
+      <button id="togglePremium" class="premium-btn">💎 Show Premium Features</button>
+    </div>
+
+    <div id="premiumGrid" class="grid hidden">
+      <a href="pages/cleaning.html" class="tile premium-tile">🧹 Cleaning Assistant</a>
+      <a href="pages/delivery.html" class="tile premium-tile">📦 Delivery Bot</a>
+      <a href="pages/tracker.html" class="tile premium-tile">📍 Item Tracker</a>
+      <a href="pages/status.html" class="tile premium-tile">🤖 Robot Status Monitor</a>
     </div>
   </section>
+</main>
 
+<script>
+  // 💎 PREMIUM FEATURE TOGGLE
+  const toggleButton = document.getElementById('togglePremium');
+  const premiumGrid = document.getElementById('premiumGrid');
+
+  toggleButton.addEventListener('click', () => {
+    premiumGrid.classList.toggle('hidden');
+
+    toggleButton.textContent = premiumGrid.classList.contains('hidden')
+      ? '💎 Show Premium Features'
+      : '⬆ Hide Premium Features';
+  });
+</script>
   <footer>
     &copy; 2025 Intern Bot — Intelligent Office Assistant
   </footer>
