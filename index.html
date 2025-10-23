@@ -17,7 +17,6 @@
   <!-- Header -->
   <header>
     <h1>Intern Bot Hub</h1>
-    <button id="dropdownBtn">Premium Physical Robot Features ⬇</button>
   </header>
 
   <!-- Digital Intern Bot Features -->
@@ -50,28 +49,28 @@
       <button id="togglePremium" class="premium-btn">💎 Show Premium Features</button>
     </div>
 
-    <div id="premiumGrid" class="grid hidden">
-      <a href="pages/cleaning.html" class="tile premium-tile">🧹 Cleaning Assistant</a>
-      <a href="pages/delivery.html" class="tile premium-tile">📦 Delivery Bot</a>
-      <a href="pages/tracker.html" class="tile premium-tile">📍 Item Tracker</a>
-      <a href="pages/status.html" class="tile premium-tile">🤖 Robot Status Monitor</a>
+    <div class="grid-container hidden" id="premiumGrid">
+      <a href="pages/cleaning.html" class="tile">🧹 Cleaning Assistant</a>
+      <a href="pages/delivery.html" class="tile">📦 Delivery Bot</a>
+      <a href="pages/tracker.html" class="tile">📍 Item Tracker</a>
+      <a href="pages/status.html" class="tile">🤖 Robot Status Monitor</a>
     </div>
   </section>
-</main>
+  </main>
 
-<script>
-  // 💎 PREMIUM FEATURE TOGGLE
-  const toggleButton = document.getElementById('togglePremium');
-  const premiumGrid = document.getElementById('premiumGrid');
+  <script>
+    // 💎 PREMIUM FEATURE TOGGLE
+    const toggleButton = document.getElementById('togglePremium');
+    const premiumGrid = document.getElementById('premiumGrid');
 
-  toggleButton.addEventListener('click', () => {
-    premiumGrid.classList.toggle('hidden');
+    toggleButton.addEventListener('click', () => {
+      premiumGrid.classList.toggle('hidden');
 
-    toggleButton.textContent = premiumGrid.classList.contains('hidden')
-      ? '💎 Show Premium Features'
-      : '⬆ Hide Premium Features';
-  });
-</script>
+      toggleButton.textContent = premiumGrid.classList.contains('hidden')
+        ? '💎 Show Premium Features'
+        : '⬆ Hide Premium Features';
+    });
+  </script>
   <footer>
     &copy; 2025 Intern Bot — Intelligent Office Assistant
   </footer>
