@@ -1,8 +1,12 @@
 :root {
   --salmon: #FA8072;
-  --burgundy: #800020;
-  --light-bg: #FFF5F2;
-  --tile-hover: #A52A2A;
+  --light-blue: #cce3ef;
+  --light-bg: #f9e6d4;
+  --tile-hover: #97bed3;
+  --text-color: #4b4649;
+  --gradient-darkest : #557a8d;
+  --gradient-lightest : #97bed3;
+  --muted-green: #718b8a;
 }
 
 body {
@@ -37,7 +41,7 @@ header h1 {
 
 h2 {
   padding-left: 2rem;
-  color: var(--burgundy);
+  color: var(--text-color);
 }
 
 .grid-container {
@@ -49,8 +53,10 @@ h2 {
 
 
 .tile {
-  background-color: var(--burgundy);
-  color: white;
+  background-color: var(--light-blue);
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +72,7 @@ h2 {
 
 .tile:hover {
   transform: translateY(-6px);
-  background-color: #A52A2A;
+  background-color: var(--tile-hover);
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
@@ -93,7 +99,7 @@ h2 {
   border-radius: 10px;
   width: 90%;
   max-width: 500px;
-  color: var(--burgundy);
+  color: var(--light-blue);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -102,7 +108,7 @@ h2 {
   font-size: 1.8rem;
   font-weight: bold;
   cursor: pointer;
-  color: var(--burgundy);
+  color: var(--light-blue);
 }
 
 .close:hover {
@@ -113,12 +119,22 @@ h2 {
   margin-top: 0;
 }
 
-header, footer {
-  background-color: var(--burgundy);
-  color: white;
+header {
+  background-color: var(--light-blue);
+  color: var(--text-color);
   text-align: center;
   padding: 1rem 1.5rem;
   border-radius: 0 0 16px 16px; /* rounded bottom corners for header, top for footer */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+footer
+{
+  background-color: var(--light-blue);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 16px 16px 0 0; /* rounded bottom corners for header, top for footer */
   box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
@@ -127,23 +143,31 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 .tile i {
   font-size: 2.2rem;
   margin-bottom: 0.6rem;
-  color: var(--salmon);
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .tile span {
-  transition: color 0.3s ease;
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tile a{
+  text-decoration: none;
 }
 
 body {
   display: flex;
   flex-direction: column;
   background-color: var(--light-bg);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Helvetica", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .task-container {
   max-width: 700px;
   margin: 2rem auto;
@@ -171,7 +195,7 @@ body {
 }
 
 #taskForm button {
-  background-color: #b22222;
+  background-color: #cce3ef;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -278,42 +302,24 @@ body {
 .category-Admin { color: #e9c46a; }
 .category-Maintenance { color: #e76f51; }
 .category-Other { color: #264653; }
-/* Base tile style */
-.tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  background: #a11212; /* burgundy */
-  color: #ffd7c4; /* light salmon text */
-  text-decoration: none;
-  border-radius: 1rem;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-.tile:hover {
-  transform: translateY(-4px);
-  background: #e57a69;
-  color: white;
-}
 
 /* Premium Section Styling */
 .premium-section {
-  background: #fff8f7;
-  border-top: 3px solid #e57a69;
+  background: var(--light-bg);
+  border: 3px solid var(--muted-green);
   border-radius: 1rem;
   padding: 1rem 1rem 2rem;
+  margin: 0 2rem 2rem 2rem;
 }
 
 .premium-btn {
-  background: linear-gradient(90deg, #a11212, #e57a69);
+  background: linear-gradient(90deg, var(--gradient-darkest), var(--gradient-lightest));
   border: none;
-  color: white;
+  color: var(--text-color);
+  font-style: italic;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
+  margin-left:32px;
   border-radius: 0.8rem;
   cursor: pointer;
   transition: 0.3s;
@@ -324,10 +330,6 @@ body {
   transform: scale(1.05);
 }
 
-.premium-tile {
-  background: #e57a69;
-  color: white;
-}
 
 .premium-tile:hover {
   background: #a11212;
