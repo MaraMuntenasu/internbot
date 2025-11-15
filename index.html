@@ -21,7 +21,7 @@
 
   <!-- Digital Intern Bot Features -->
   <section>
-    <h2>Digital Intern Bot</h2>
+    <h2 class="section-title1">Digital Intern Bot</h2>
     <div class="grid-container" id="digitalGrid">
       <a href="pages/task-management.html" class="tile">
         <i class="fa-solid fa-clipboard-check"></i>
@@ -45,8 +45,8 @@
 
   <section class="hub-section premium-section">
     <div class="premium-header">
-      <h2 class="section-title">Social Intern Bot (S-IB) — Premium Full Version</h2>
-      <button id="togglePremium" class="premium-btn">💎 Show Premium Features</button>
+      <h2 class="section-title2">Social Intern Bot (S-IB) — Premium Full Version</h2>
+      <button id="togglePremium" class="premium-btn">💎<span class="premium-text">Show Premium Features</span></button>
     </div>
 
     <div class="grid-container hidden" id="premiumGrid">
@@ -66,9 +66,11 @@
     toggleButton.addEventListener('click', () => {
       premiumGrid.classList.toggle('hidden');
 
-      toggleButton.textContent = premiumGrid.classList.contains('hidden')
-        ? '💎 Show Premium Features'
-        : '⬆ Hide Premium Features';
+      if (premiumGrid.classList.contains('hidden')) {
+        toggleButton.innerHTML = '💎<span class="premium-text">Show Premium Features</span>';
+      } else {
+        toggleButton.innerHTML = '⬆<span class="premium-text">Hide Premium Features</span>';
+      }
     });
   </script>
   <footer>

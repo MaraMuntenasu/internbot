@@ -1,12 +1,15 @@
 :root {
   --salmon: #FA8072;
-  --light-blue: #cce3ef;
-  --light-bg: #f9e6d4;
+  --light-blue: #ffaa6e;
+  --light-bg: #ffffe3;
   --tile-hover: #97bed3;
-  --text-color: #4b4649;
-  --gradient-darkest : #557a8d;
-  --gradient-lightest : #97bed3;
+  --text-color: #F5F5F4;
+  --gradient-darkest : #ff5900;
+  --gradient-lightest : #ffaa6e;
   --muted-green: #718b8a;
+  /*--ivoire: #ffffe3; */
+  /* old bg color  f9e6d4 */
+  /* orange #ffaa6e */
 }
 
 body {
@@ -298,6 +301,17 @@ body {
   margin-right: 0.5rem;
 }
 
+.section-title1
+{
+  margin-left : 5px;
+  color : var(--gradient-darkest);
+}
+
+.section-title2
+{
+  color : var(--gradient-darkest);
+}
+
 .category-Work { color: #2a9d8f; }
 .category-Admin { color: #e9c46a; }
 .category-Maintenance { color: #e76f51; }
@@ -316,13 +330,18 @@ body {
   background: linear-gradient(90deg, var(--gradient-darkest), var(--gradient-lightest));
   border: none;
   color: var(--text-color);
-  font-style: italic;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   margin-left:32px;
   border-radius: 0.8rem;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.premium-text
+{
+  font-weight: bold;
+  font-style: italic;
 }
 
 .premium-btn:hover {
