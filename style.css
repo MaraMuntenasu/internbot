@@ -1,9 +1,9 @@
 :root {
   --salmon: #FA8072;
-  --light-blue: #ffaa6e;
-  --light-bg: #ffffe3;
+  --light-blue: #fcfcce;
+  --light-bg: #f9f9f2;
   --tile-hover: #97bed3;
-  --text-color: #F5F5F4;
+  --text-color: #000000;
   --gradient-darkest : #ff5900;
   --gradient-lightest : #ffaa6e;
   --muted-green: #718b8a;
@@ -304,13 +304,8 @@ body {
 .section-title1
 {
   margin-left : 5px;
-  color : var(--gradient-darkest);
 }
 
-.section-title2
-{
-  color : var(--gradient-darkest);
-}
 
 .category-Work { color: #2a9d8f; }
 .category-Admin { color: #e9c46a; }
